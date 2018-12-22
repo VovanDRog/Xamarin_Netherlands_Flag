@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Xamarin_02_01.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Xamarin_02_01">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style
+                x:Key="redBox"
+                TargetType="BoxView">
+                <Setter Property="BackgroundColor" Value="Red" />
+                <Setter Property="Margin" Value="50, 50, 50, 0" />
+            </Style>
+            <Style
+                x:Key="whiteBox"
+                TargetType="BoxView">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="Margin" Value="50, -6, 50, 0" />
+            </Style>
+            <Style
+                x:Key="blueBox"
+                TargetType="BoxView">
+                <Setter Property="BackgroundColor" Value="Blue" />
+                <Setter Property="Margin" Value="50, -6, 50, 50" />
+            </Style>
+            <Style
+                x:Key="labelStyle"
+                TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout
+        Padding="0"
+        BackgroundColor="Accent">
+        <BoxView
+            Style="{StaticResource redBox}" />
+        <BoxView
+            Style="{StaticResource whiteBox}" />
+        <BoxView
+            Style="{StaticResource blueBox}" />
+        <Label
+            Style="{StaticResource labelStyle}"
+            Text="Netherlands" />
+
+    </StackLayout>
+
+</ContentPage>
